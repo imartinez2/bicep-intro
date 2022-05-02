@@ -1,0 +1,8 @@
+az login --use-device-code  --tenant 29b7d677-91c4-4717-abb3-224400c8bf44
+
+az account set -s 31462e19-b78e-46ef-8e5b-772c1965248c
+
+
+az deployment sub create -l eastus -f rg.bicep
+
+az deployment group create -g rg-Demo-Mayo-2 -f vnet.bicep
