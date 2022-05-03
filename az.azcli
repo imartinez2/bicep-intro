@@ -7,7 +7,8 @@ az login --service-principal -u '{appid}' -p '{secret}' --tenant {tenantid}
 #Set subcription default
 az account set -s {subid}
 
-
+#Execute deployment to subscription scope
 az deployment sub create -l eastus -f rg.bicep
 
+#Execute deployment to resource group scope
 az deployment group create -g rg-Demo-Mayo-2 -f vnet.bicep
